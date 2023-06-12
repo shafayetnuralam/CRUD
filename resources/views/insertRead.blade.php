@@ -51,10 +51,12 @@
   <tbody class="text-danger bg-light fs-4">
     @foreach($data as $item)
     <tr>
-        <td class="pt-5">{{$item['PName']}}</td>
+      <form action="" method="get">
+        <td class="pt-5"><input type="text" name="" balue=""> {{$item['PName']}}</td>
         <td class="pt-5">{{$item['PPrice']}}</td>
         <td class="pt-5"><img src="{{asset('images/'.$item['PImage'])}}" width="100px" height="100px" alt=""></td>
-        <td class="pt-5"><a href="">Edit</a> | <a href="">Delete</a></td>
+        <td class="pt-5"><input type="submit" class="btn btn-outline-warning rounded-pill" value="Update"> || <input type="submit" class="btn btn-outline-danger rounded-pill" value="Delete"></td>
+        </form>
     </tr>
     @endforeach
   </tbody>
